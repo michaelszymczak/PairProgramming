@@ -1,9 +1,15 @@
 
 public class RomanNumeralConverter implements RomanNumeralConverterService {
 
+    RomanNumeralConverterService service;
+
+    public RomanNumeralConverter(RomanNumeralConverterService service) {
+        this.service = service;
+    }
+
     public String convert(int arabic) {
-        if (arabic == 2)
-            return "II";
-        return "I";
+        return service.convert(arabic);
+
+
     }
 }
