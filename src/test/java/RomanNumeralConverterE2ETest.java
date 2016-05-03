@@ -1,11 +1,7 @@
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class RomanNumeralConverterE2ETest {
 
@@ -34,5 +30,13 @@ public class RomanNumeralConverterE2ETest {
         assertEquals("XXI", converter.convert(21));
     }
 
-
+    @Test
+    public void shouldSubtractROmanNumeralsIfLargerOneIsAfterSmallerOne() throws Exception {
+        assertEquals("IV", converter.convert(4));
+        assertEquals("IX", converter.convert(9));
+        assertEquals("XL", converter.convert(40));
+        assertEquals("XC", converter.convert(90));
+        assertEquals("CD", converter.convert(400));
+        assertEquals("CM", converter.convert(900));
+    }
 }

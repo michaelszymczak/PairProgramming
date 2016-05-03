@@ -3,8 +3,8 @@ import java.util.Map;
 
 public class RomanNumeralServiceImpl implements RomanNumeralConverterService {
 
-    int[] arabic = { 1000, 900, 500, 100, 90, 50, 10, 9, 5, 3, 2, 1 };
-    String[] roman = {  "M",  "CM", "D", "C",  "XC", "L",  "X", "IX", "V", "III", "II", "I" };
+    int[] arabic = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 3, 2, 1 };
+    String[] roman = {  "M",  "CM", "D", "CD", "C",  "XC", "L", "XL", "X", "IX", "V", "IV", "III", "II", "I" };
 
     Map<Integer, String> mapping = new LinkedHashMap<Integer, String>();
 
