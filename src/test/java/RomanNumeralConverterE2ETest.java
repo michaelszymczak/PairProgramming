@@ -39,4 +39,10 @@ public class RomanNumeralConverterE2ETest {
         assertEquals("CD", converter.convert(400));
         assertEquals("CM", converter.convert(900));
     }
+
+    @Test
+    public void shouldConvertNumberRegardlesOfHowComplexTheyAre() throws Exception {
+        assertEquals("MCMLXXXVIII", converter.convert(1988));
+        assertEquals("MCMXC", converter.convert(1990));
+    }
 }
